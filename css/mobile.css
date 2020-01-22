@@ -42,6 +42,12 @@
         width: calc(100% - 0.8em) !important;
     }
 
+    .company-logo {
+        height: auto !important;
+        height: 2.5em !important;
+        width: 2.5em !important;
+    }
+
     .job-info {
         padding-top: 0.8em !important;
     }
