@@ -1,33 +1,3 @@
-/* Hootsuite */
-#langbar0 {
-    background: linear-gradient(to bottom, #00ADD8 42%, #c22d40 42%, #c22d40 75%, #384d54 75%, #384d54 95%, #474747 95%);
-}
-
-/* Speech2Braille */
-#langbar1 {
-    background: linear-gradient(to bottom, #3572A5 89.9%, #474747 10.1%);
-}
-
-/* PacketBook */
-#langbar2 {
-    background: linear-gradient(to bottom, #f1e05a 80.8%, #3572A5 80.8%);
-}
-
-/* Envoy Front Proxy */
-#langbar3 {
-    background: linear-gradient(to bottom, #00ADD8 92.7%, #384d54 7.3%);
-}
-
-/* Project SID */
-#langbar4 {
-    background: linear-gradient(to bottom, #3572A5 56.9%, #f1e05a 56.9%, #f1e05a 79.5%, #f34b7d 79.5%, #f34b7d 90%, #E15525 90%, #E15525 96%, #563d7c 96%);
-}
-
-/* GroupCalendar */
-#langbar5 {
-    background: linear-gradient(to bottom, #f1e05a 54.0%, #563d7c 54.0%, #563d7c 79.8%, #E15525 79.8%);
-}
-
 h3 {
     font-family: "Courier Prime";
     text-align: left;
@@ -43,7 +13,7 @@ h3 {
 
 .slider__caption {
     font-weight: 600;
-    font-size: 2em;
+    font-size: 1em;
     margin-bottom: 0.2rem;
     color: white;
 }
@@ -54,9 +24,16 @@ h3 {
     text-align: left;
 }
 
+.job_title {
+    font-weight: 400;
+    font-size: 0.6em;
+    margin-bottom: 0.2rem;
+    color: #b1b1b1;
+}
+
 .company-logo {
-    width: 52px;
-    height: 52px;
+    width: 1em;
+    height: 1em;
     border-radius: 3px;
     margin-right: 1em;
 }

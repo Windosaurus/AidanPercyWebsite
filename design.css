@@ -25,7 +25,7 @@ body {
 
 .company-logo {
     height: auto;
-    width: 3.5em;
+    width: 2em;
 }
 
 .main_container {
@@ -57,7 +57,7 @@ body {
 h2 {
     font-family: 'Arial';
     font-weight: 700;
-    font-size: 3em;
+    font-size: 2em;
     text-align: center;
     color: white
 }
@@ -131,7 +131,7 @@ h1 {
 
 #prev-about {
     font-family: 'Courier Prime', monospace;
-    font-size: 1em;
+    font-size: 0.75em;
     opacity: 0.7;
     padding-top: 3.5em;
     font-weight: normal;
@@ -146,7 +146,7 @@ h1 {
 
 #prev-exp {
     font-family: 'Courier Prime', monospace;
-    font-size: 2em;
+    font-size: 0.75em;
     opacity: 0.7;
     padding-top: 0em;
     font-weight: normal;
@@ -161,7 +161,7 @@ h1 {
 
 #prev-projects {
     font-family: 'Courier Prime', monospace;
-    font-size: 2em;
+    font-size: 0.75em;
     opacity: 0.7;
     font-weight: normal;
     color: white
@@ -234,57 +234,6 @@ h1 {
     transform: rotateY(-90deg);
 }
 
-
-/* Bio CSS */
-
-#bio {
-    float: center;
-    flex: 0 0 100%;
-    line-height: 1.0;
-}
-
-#bio_body {
-    margin-top: 0.5em;
-    font-size: 1.3em;
-    margin-bottom: 1.2em;
-    margin-left: 16em;
-    width: 40em;
-}
-
-#bio_img_div {
-    align-items: left;
-    float: left;
-    flex-basis: 40%;
-    margin-top: 0.5em;
-    padding-right: 1.75em;
-    padding-bottom: 2em;
-    width: 28%;
-    height: auto;
-}
-
-i:hover {
-    color: white;
-}
-
-i {
-    font-size: 3vh;
-    letter-spacing: 1em;
-}
-
-a:hover {
-    color: white;
-    text-decoration: none;
-}
-
-#bio_container:hover > #bio > h2 > .hover {
-    opacity: 1.0;
-}
-
-#bio_container:hover > #bio > h2 > .hover::after {
-    width: 100%;
-}
-
-
 #experience_container:hover > h2 > .hover {
     opacity: 1.0;
 }
@@ -293,13 +242,6 @@ a:hover {
     width: 100%;
 }
 
-#vid:hover > h2 > .hover {
-    opacity: 1.0;
-}
-
-#vid:hover > h2 > .hover::after {
-    width: 100%;
-}
 
 #projects_container {
     padding-bottom: 5em;
@@ -313,22 +255,18 @@ a:hover {
     width: 100%;
 }
 
-/* Video CSS */
-#vid {
-    margin-top: 1em;
-}
 
 /* Contact Button CSS */
 #copyright {
     text-align: center;
     background-color: #080808;
-    padding-bottom: 3em;
+    padding-bottom: 1em;
 }
 
 #copyright p {
     width: 100%;
     color: #b1b1b1;
-    font-size: 1em;
+    font-size: 0.5em;
     padding-bottom: 1em;
 }
 

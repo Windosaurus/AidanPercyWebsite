@@ -63,9 +63,6 @@
     width: 50%;
 }
 
-.accordion-panel iframe {
-    pos padding-left: 3em;
-}
 
 .accordion-image {
     position: inherit;
@@ -74,7 +71,6 @@
     opacity: 0.6;
     padding-top: 1em;
     padding-bottom: 1em;
-    padding-left: 3em;
 }
 
 .accordion-image:hover {
@@ -85,17 +81,6 @@
     size: 3em;
     padding-top: 1em;
     color: #dfdfdf;
-}
-
-/* Active */
-.proj_left.is-active .accordion-arrow {
-    transform: rotateX(180deg) rotateZ(45deg);
-}
-
-.proj_desc a {
-    font-family: "Courier Prime";
-    color: white;
-    padding-right: 1em;
 }
 
 

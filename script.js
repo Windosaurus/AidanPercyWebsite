@@ -10,7 +10,7 @@ class Visual {
         this.canvasHeight = 0;
         this.particleLength = 400;
         this.particles = [];
-        this.particleMaxRadius = 30;
+        this.particleMaxRadius = 5;
 
         this.handleMouseMoveBind = this.handleMouseMove.bind(this);
         this.handleResizeBind = this.handleResize.bind(this);
