@@ -1,0 +1,101 @@
+.accordion {
+    margin: 1rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+.accordion-item {
+    margin-top: 1em;
+    background-color: rgba(66, 139, 202, 0.20);
+}
+
+.proj_left {
+    width: 100%;
+    padding: 1.3em 0 1.3em 1.3em;
+}
+
+.short-desc {
+    width: auto !important;
+    white-space: nowrap;
+}
+
+.spacer {
+    flex: 25%;
+}
+
+/* Thumb */
+.accordion-thumb {
+    margin: 0;
+    white-space: nowrap;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.3em;
+    padding-right: 0.3em;
+}
+
+/* Arrow */
+.accordion-arrow {
+    float: right;
+    height: 7px;
+    min-width: 7px;
+    margin-right: 1rem;
+    margin-left: .5rem;
+    vertical-align: middle;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    border-color: var(--dark);
+    transform: rotate(45deg);
+    transition: transform .4s ease-in-out;
+}
+
+/* Panel */
+.accordion-panel {
+    margin: 0;
+    padding-bottom: .8rem;
+    padding-top: .8rem;
+    display: none;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.accordion-panel iframe {
+    pos padding-left: 3em;
+}
+
+.accordion-image {
+    position: inherit;
+    height: auto;
+    width: 50em;
+    opacity: 0.6;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 3em;
+}
+
+.accordion-image:hover {
+    opacity: 1.0;
+}
+
+.accordion-panel p {
+    size: 3em;
+    padding-top: 1em;
+    color: #dfdfdf;
+}
+
+/* Active */
+.proj_left.is-active .accordion-arrow {
+    transform: rotateX(180deg) rotateZ(45deg);
+}
+
+.proj_desc a {
+    font-family: "Courier Prime";
+    color: white;
+    padding-right: 1em;
+}
+
+
