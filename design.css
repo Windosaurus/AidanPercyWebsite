@@ -2,11 +2,10 @@
 @import url(https://fonts.googleapis.com/css?family=Courier+Prime|Ubuntu|Montserrat:400,600,700|Open+Sans&display=swap);
 @import url("css/arrow.css");
 @import url("css/bio.css");
-@import url("css/smaller-screens.css");
-@import url("css/langbars.css");
 @import url("css/video.css");
 @import url("css/proj.css");
 @import url("css/mobile.css");
+
 
 
 .mobile-only {
@@ -16,7 +15,7 @@
 body {
     width: 100%;
     height: 100vh;
-    color: #080808;
+    color: #000000;
 }
 
 .flexcontainer {
@@ -25,13 +24,13 @@ body {
 
 .company-logo {
     height: auto;
-    height: 2.5em;
-    width: 2.5em;
+    height: 4em;
+    width: 4em;
 }
 
 .main_container {
     padding: 0 20vw 30px 20vw;
-    background: #080808;
+    background: #000000;
     color: #8C9BA8;
 }
 
@@ -108,12 +107,13 @@ a {
 
 #landing-overlay {
     z-index: 9999 !important;
-    color: #080808;
+    color: #000000;
     left: 20%;
     top: 40%;
     width: 60%;
     height: 60%;
 }
+
 
 /* Header Text */
 h1 {
@@ -125,7 +125,7 @@ h1 {
 
 #canvas {
     display: block;
-    background-color: #080808;
+    background-color: #000000;
     width: 100%;
     height: 100%;
 }
@@ -256,11 +256,59 @@ h1 {
     width: 100%;
 }
 
+h3 {
+    font-family: "Courier Prime";
+    text-align: left;
+    display: inline-block;
+    margin: 0 1rem 0.3rem 0rem;
+}
+
+.lang_bar {
+    flex: 0 0 0.8em;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.slider__caption {
+    font-weight: 600;
+    font-size: 1em;
+    margin-bottom: 0.2rem;
+    color: white;
+}
+
+.slider__txt {
+    color: white;
+    margin: 1rem 1rem 1rem 0;
+    text-align: left;
+}
+
+.job_title {
+    font-weight: 400;
+    font-size: 0.6em;
+    margin-bottom: 0.2rem;
+    color: #b1b1b1;
+}
+
+.company-logo {
+    width: 2em;
+    height: 2em;
+    border-radius: 3px;
+    margin-right: 1em;
+}
+
+.job-info {
+    padding: 0em 0 0em 0;
+}
+
+.lang_bar {
+    position: relative;
+}
+
 
 /* Contact Button CSS */
 #copyright {
     text-align: center;
-    background-color: #080808;
+    background-color: #000000;
     padding-bottom: 1em;
 }
 

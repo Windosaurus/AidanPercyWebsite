@@ -1,161 +1,78 @@
-function random(low, high) {
-    return Math.random() * (high - low) + low;
+//Particiles ----------------------------------------------------------
+
+var canvas = document.querySelector('canvas')
+var body = document.querySelector('body')
+canvas.width = body.offsetWidth
+canvas.height = body.offsetHeight
+var ctx = canvas.getContext('2d')
+var particleCount = 100
+partCnt = 100;
+var particles = [];
+function random_range(min, max){
+    return Math.round(min + Math.random() * (max-min))
 }
-
-class Visual {
-    constructor() {
-        this.canvas = document.querySelector('#canvas');
-        this.context = this.canvas.getContext('2d');
-        this.canvasWidth = 0;
-        this.canvasHeight = 0;
-        this.particleLength = 400;
-        this.particles = [];
-        this.particleMaxRadius = 5;
-
-        this.handleMouseMoveBind = this.handleMouseMove.bind(this);
-        this.handleResizeBind = this.handleResize.bind(this);
-
-        this.initialize();
-        this.render();
-    }
-
-    // Initialize particles
-    initialize() {
-        this.resizeCanvas();
-        for (let i = 0; i < this.particleLength; i++) {
-            this.particles.push(this.createParticle(i));
-        }
-        this.bind();
-    }
-
-    // bind event listeners
-    bind() {
-        document.body.addEventListener('mousemove', this.handleMouseMoveBind, false);
-        window.addEventListener('resize', this.handleResizeBind, false);
-    }
-
-    unbind() {
-        document.body.removeEventListener('mousemove', this.handleMouseMoveBind, false);
-        window.removeEventListener('resize', this.handleResizeBind, false);
-    }
-
-    handleMouseMove(e) {
-        this.enlargeParticle(e.clientX, e.clientY);
-    }
-
-    handleResize() {
-        this.resizeCanvas();
-    }
-
-    resizeCanvas() {
-        this.canvasWidth = document.body.offsetWidth;
-        this.canvasHeight = document.body.offsetHeight;
-        this.canvas.width = this.canvasWidth * window.devicePixelRatio;
-        this.canvas.height = this.canvasHeight * window.devicePixelRatio;
-        this.context = this.canvas.getContext('2d');
-        this.context.scale(window.devicePixelRatio, window.devicePixelRatio);
-    }
-
-    // particle creation
-    createParticle(id, isRecreate) {
-        // randomize position and radius
-        const radius = random(5, this.particleMaxRadius);
-        const x = isRecreate ? -radius - random(0, this.canvasWidth) : random(0, this.canvasWidth);
-        let y = random(this.canvasHeight / 2 - 150, this.canvasHeight / 2 + 150);
-        y += random(-100, 100);
-
-        const alpha = random(0.05, 0.6);
-
-        // pick random colour
-        var col
-        switch (Math.floor(Math.random() * 3)) {
-            case 0:
-                col = [0, 128, 255];
-                break;
-            case 1:
-                col = [216, 235, 255];
-                break;
-            case 2:
-                col = [0, 30, 59];
-                break;
-        }
-
-        return {
-            id: id,
-            x: x,
-            y: y,
-            startY: y,
-            radius: radius,
-            defaultRadius: radius,
-            startAngle: 0,
-            endAngle: Math.PI * 2,
-            alpha: alpha,
-            ref_alpha: alpha,
-            color: {r: col[0], g: col[1], b: col[2]},
-            speed: alpha,
-            amplitude: random(50, 200)
-        };
-    }
-
-    drawParticles() {
-        this.particles.forEach(particle => {
-            this.moveParticle(particle);
-            this.context.beginPath();
-            this.context.fillStyle = `rgba(${particle.color.r}, ${particle.color.g}, ${particle.color.b}, ${particle.alpha})`;
-            this.context.arc(particle.x, particle.y, particle.radius, particle.startAngle, particle.endAngle);
-            this.context.fill();
-        });
-    }
-
-    moveParticle(particle) {
-        particle.x += particle.speed;
-        particle.y = particle.startY + particle.amplitude * Math.sin(((particle.x / 6) * Math.PI) / 180);
-    }
-
-    enlargeParticle(clientX, clientY) {
-        this.particles.forEach(particle => {
-
-            const distance = Math.hypot(particle.x - clientX, particle.y - clientY);
-
-            if (distance <= 100) {
-                const scaling = (100 - distance) / 12;
-                TweenMax.to(particle, 0.5, {
-                    radius: particle.defaultRadius + scaling,
-                    alpha: 1,
-                    ease: Power2.easeOut,
-                    speed: 1
-                });
-            } else {
-                TweenMax.to(particle, 0.5, {
-                    radius: particle.defaultRadius,
-                    ease: Power2.easeOut,
-                    alpha: particle.ref_alpha,
-                    speed: particle.ref_alpha
-                });
-            }
-        });
-    }
-
-    render() {
-        this.context.clearRect(0, 0, this.canvasWidth + this.particleMaxRadius * 2, this.canvasHeight);
-        this.context.fillStyle = "#080808";
-        this.context.fillRect(0, 0, canvas.width, canvas.height);
-        this.drawParticles();
-
-        // kill offscreen particles and re-render
-        this.particles.forEach(particle => {
-            if (particle.x - particle.radius >= this.canvasWidth) {
-                this.particles[particle.id] = this.createParticle(particle.id, true);
-            }
-        });
-
-        requestAnimationFrame(this.render.bind(this));
+for(var i = 0; i < partCnt; i++){
+    particles[i] = {
+        x: random_range(0, canvas.width),
+        y: random_range(0, canvas.height),
+        xSpeed: random_range(-2, 2),
+        ySpeed: random_range(-2, 2),
+        size: random_range(1, 10),
+        range: random_range(10, 75)
     }
 }
 
-new Visual();
+//Rotating Text ----------------------------------------------------------
 
-// Rotating Text credit to alphardex
+requestAnimationFrame(draw)
+function draw(){
+    requestAnimationFrame(draw)
+    ctx.fillStyle = 'rgba(0,0,0,1)'
+    ctx.fillRect(0, 0, canvas.width, canvas.height)
+
+    //Loop each particle
+    for(var i = 0; i < partCnt; i++){
+
+        //Draw the particle
+        particles[i].x += particles[i].xSpeed;
+        particles[i].y += particles[i].ySpeed;
+        ctx.fillStyle = "blue"
+        ctx.fillRect(particles[i].x,particles[i].y,particles[i].size,particles[i].size)
+
+        //How we will draw the lines
+        check_points(particles[i].x, particles[i].y, particles[i].size, particles[i].range)
+
+        //This will flip the particles across if they go out of bounds!
+        if(particles[i].x > canvas.width)
+            particles[i].x = 0
+        if(particles[i].x < 0)
+            particles[i].x = canvas.width
+        if(particles[i].y > canvas.height)
+            particles[i].y = 0
+        if(particles[i].y < 0)
+            particles[i].y = canvas.height
+    }
+}
+
+
+function check_points(x, y, size, range){
+    for(var i = 0; i < partCnt; i++){
+        if(distance(x, y, particles[i].x, particles[i].y) < range){
+            ctx.beginPath()
+            ctx.moveTo(x+size/2,y+size/2)
+            ctx.lineTo(particles[i].x+particles[i].size/2,particles[i].y+particles[i].size/2)
+            ctx.strokeStyle = "#fff"
+            ctx.stroke()
+        }
+    }
+}
+
+function distance(x1, y1, x2, y2){
+    return Math.sqrt(Math.pow((x2 - x1),2) + Math.pow((y2 - y1),2) )
+}
+
+
+
 var words = document.querySelectorAll(".word");
 words.forEach(function (word) {
     var letters = word.textContent.split("");
