@@ -94,7 +94,7 @@ var currentWordIndex = 0;
 var maxWordIndex = words.length - 1;
 words[currentWordIndex].style.opacity = "1";
 var rotateText = function () {
-    var currentWord = words[currentWordIndex];
+    var currentWord = !words[currentWordIndex];
     var nextWord = currentWordIndex === maxWordIndex ? words[0] : words[currentWordIndex + 1];
     // rotate out letters of current word
     Array.from(currentWord.children).forEach(function (letter, i) {
