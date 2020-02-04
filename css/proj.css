@@ -1,6 +1,5 @@
 .accordion {
     margin: 1rem 0;
-    padding: 0;
     cursor: pointer;
     list-style: none;
 }
@@ -11,7 +10,7 @@
 }
 
 .proj_left {
-    width: 100%;
+    width: 90%;
     padding: 1.3em 0 1.3em 1.3em;
 }
 
@@ -24,7 +23,7 @@
     flex: 25%;
 }
 
-/* Thumb */
+/* Thumb----------------------------------------------------------------- */
 .accordion-thumb {
     margin: 0;
     white-space: nowrap;
@@ -36,7 +35,7 @@
 
 
 
-/* Panel */
+/* Accordion content------------------------------------------------------------------ */
 .accordion-panel {
     margin: 0;
     padding-bottom: .8rem;
