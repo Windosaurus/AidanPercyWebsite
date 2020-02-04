@@ -22,11 +22,6 @@ body {
     display: flex
 }
 
-.company-logo {
-    height: auto;
-    height: 4em;
-    width: 4em;
-}
 
 .main_container {
     padding: 0 20vw 30px 20vw;
@@ -54,47 +49,13 @@ body {
     cursor: pointer;
 }
 
-h2 {
-    font-family: 'Arial';
-    font-weight: 700;
-    font-size: 2em;
-    text-align: center;
-    color: white
-}
-
-.hover {
-    color: #bbe7ff;
-    text-decoration: none;
-    padding: 20px 0px;
-    margin: 0px 0px 0px 0px;
-    display: inline-block;
-    position: relative;
-    opacity: 0.6;
-    z-index: 1;
-}
-
-.hover::after {
-    transition: 300ms;
-    height: 5px;
-    content: "";
-    position: absolute;
-    background-color: #bbe7ff;
-    opacity: 1.0;
-    z-index: -1;
-    width: 0%;
-    left: 0px;
-    bottom: 15px;
-    padding: 0;
-    margin: 0;
-}
-
 a {
     text-decoration: none;
     color: #bbe7ff;
     transition: all 0.2s ease;
 }
 
-/* Landing Page CSS */
+/* Landing------------------------------------------------------------------ */
 #landing-container {
     position: relative;
     width: 100vw;
@@ -115,12 +76,27 @@ a {
 }
 
 
-/* Header Text */
+/* Header Text------------------------------------------------------------------ */
 h1 {
     font-family: 'Montserrat';
     font-weight: 700;
     font-size: 4vw;
     color: #ffffff
+}
+
+h2 {
+    font-family: 'Arial';
+    font-weight: 700;
+    font-size: 2em;
+    text-align: center;
+    color: white
+}
+
+h3 {
+    font-family: "Courier Prime";
+    text-align: left;
+    display: inline-block;
+    margin: 0 1rem 0.3rem 0rem;
 }
 
 #canvas {
@@ -177,9 +153,34 @@ h1 {
     flex-basis: 60%
 }
 
+.hover {
+    color: #bbe7ff;
+    text-decoration: none;
+    padding: 20px 0px;
+    margin: 0px 0px 0px 0px;
+    display: inline-block;
+    position: relative;
+    opacity: 0.6;
+    z-index: 1;
+}
 
+.hover::after {
+    transition: 300ms;
+    height: 5px;
+    content: "";
+    position: absolute;
+    background-color: #bbe7ff;
+    opacity: 1.0;
+    z-index: -1;
+    width: 0%;
+    left: 0px;
+    bottom: 15px;
+    padding: 0;
+    margin: 0;
+}
 
-/* Rotating Text CSS */
+/* Rotating Words------------------------------------------------------------------ */
+
 
 .col1 {
     color: #428bca
@@ -232,6 +233,8 @@ h1 {
     transform: rotateY(-90deg);
 }
 
+/* Experience------------------------------------------------------------------ */
+
 #experience_container:hover > h2 > .hover {
     opacity: 1.0;
 }
@@ -240,6 +243,7 @@ h1 {
     width: 100%;
 }
 
+/* Projects------------------------------------------------------------------ */
 
 #projects_container {
     padding-bottom: 5em;
@@ -253,12 +257,6 @@ h1 {
     width: 100%;
 }
 
-h3 {
-    font-family: "Courier Prime";
-    text-align: left;
-    display: inline-block;
-    margin: 0 1rem 0.3rem 0rem;
-}
 
 .slider__caption {
     font-weight: 600;
@@ -296,7 +294,7 @@ h3 {
 }
 
 
-/* Contact Button CSS */
+/* Copyright------------------------------------------------------------------ */
 #copyright {
     text-align: center;
     background-color: #000000;

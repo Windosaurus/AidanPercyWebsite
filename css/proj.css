@@ -1,6 +1,7 @@
 .accordion {
     margin: 1rem 0;
     padding: 0;
+    cursor: pointer;
     list-style: none;
 }
 
@@ -34,20 +35,6 @@
 }
 
 
-/* Arrow */
-.accordion-arrow {
-    float: right;
-    height: 7px;
-    min-width: 7px;
-    margin-right: 1rem;
-    margin-left: .5rem;
-    vertical-align: middle;
-    border-right: 2px solid;
-    border-bottom: 2px solid;
-    border-color: var(--dark);
-    transform: rotate(45deg);
-    transition: transform .4s ease-in-out;
-}
 
 /* Panel */
 .accordion-panel {
