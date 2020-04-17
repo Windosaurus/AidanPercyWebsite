@@ -1,6 +1,5 @@
 /* Colour/Font Definitions */
 @import url(https://fonts.googleapis.com/css?family=Courier+Prime|Ubuntu|Montserrat:400,600,700|Open+Sans&display=swap);
-@import url("css/arrow.css");
 @import url("css/bio.css");
 @import url("css/video.css");
 @import url("css/proj.css");
@@ -87,7 +86,7 @@ h1 {
 h2 {
     font-family: 'Arial';
     font-weight: 700;
-    font-size: 2em;
+    font-size: 4em;
     text-align: center;
     color: white
 }
@@ -181,7 +180,6 @@ h3 {
 
 /* Rotating Words------------------------------------------------------------------ */
 
-
 .col1 {
     color: #428bca
 }
@@ -207,7 +205,6 @@ h3 {
     margin: 0;
     vertical-align: top;
 }
-
 .rotating-text h1 .word {
     position: absolute;
     display: flex;
@@ -215,22 +212,18 @@ h3 {
     overflow: hidden;
     padding-bottom: 0.12em;
 }
-
 .rotating-text h1 .word .letter {
-    transform-origin: center center 3em;
+    transform-origin: center center 0.8em;
 }
-
 .rotating-text h1 .word .letter.out {
-    transform: rotateY(90deg);
-    transition: 0.64s cubic-bezier(0.6, 0, 0.7, 0.2);
+    transform: rotateX(90deg);
+    transition: 0.32s cubic-bezier(0.6, 0, 0.7, 0.2);
 }
-
 .rotating-text h1 .word .letter.in {
-    transition: 0.64s ease;
+    transition: 0.32s ease;
 }
-
 .rotating-text h1 .word .letter.behind {
-    transform: rotateY(-90deg);
+    transform: rotateX(-90deg);
 }
 
 /* Experience------------------------------------------------------------------ */
@@ -260,8 +253,9 @@ h3 {
 
 .slider__caption {
     font-weight: 600;
-    font-size: 1em;
-    margin-bottom: 0.2rem;
+    font-size: 2em;
+    margin-bottom: 0.3rem;
+    margin-top: 0.2rem;
     color: white;
 }
 
@@ -273,14 +267,14 @@ h3 {
 
 .job_title {
     font-weight: 400;
-    font-size: 0.6em;
+    font-size: 1.3em;
     margin-bottom: 0.2rem;
     color: #b1b1b1;
 }
 
 .company-logo {
-    width: 2em;
-    height: 2em;
+    width: 4em;
+    height: 4em;
     border-radius: 3px;
     margin-right: 1em;
 }

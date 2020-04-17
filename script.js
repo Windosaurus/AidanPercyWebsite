@@ -1,4 +1,4 @@
-//Particiles ----------------------------------------------------------
+//Particles ----------------------------------------------------------
 
 var canvas = document.querySelector('canvas')
 var body = document.querySelector('body')

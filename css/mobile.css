@@ -68,7 +68,7 @@
         overflow: visible !important;
         padding-top: 0vw !important;
         padding-left: 0vw !important;
-        margin-left: 40vw !important;
+        margin-left: 0vw !important;
         margin-top: 5.5vw !important;
         padding-right: 4vw !important;
         width: 50vw !important;
@@ -125,10 +125,6 @@
 
     .accordion-image{
         padding: 0 0 0 0 !important;
-    }
-
-    .lang_bar {
-        flex: 0 0 0.4em !important;
     }
 
     .accordion_thumb {

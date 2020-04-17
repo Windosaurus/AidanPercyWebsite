@@ -1,4 +1,8 @@
 /* Bio------------------------------------------------------------------ */
+#bio_container {
+    display: flex;
+    text-align: center;
+}
 
 #bio {
     float: center;
@@ -9,20 +13,11 @@
 #bio_body {
     margin-top: 2em;
     font-size: 1vw;
+    text-align: center;
     padding-top: 2.1em;
     margin-bottom: 1.2em;
-    margin-left: 16em;
+    display: inline-block;
     width: 44em;
-}
-
-#bio_img {
-    align-items: left;
-    float: left;
-    flex-basis: 40%;
-    padding-top: 2em;
-    padding-bottom: 3em;
-    padding-right: 1em;
-    width: 9em;
 }
 
 i:hover {
@@ -48,9 +43,6 @@ a:hover {
     width: 100%;
 }
 
-#bio_container {
-    display: flex;
-}
 
 p {
     display: block;

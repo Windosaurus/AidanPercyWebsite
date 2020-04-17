@@ -70,4 +70,10 @@
     color: #dfdfdf;
 }
 
+ul {
+    font-family: "Open Sans";
+    list-style-type: circle;
+    margin-bottom: 1em;
+}
+
 
